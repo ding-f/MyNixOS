@@ -28,7 +28,6 @@ in
 	".mozilla"
 	".cache"
 	".ssh"
-	".config/discord"
 	".config/obs-studio"
 	".steam"
       ];

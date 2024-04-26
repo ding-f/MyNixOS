@@ -46,7 +46,6 @@ in with lib; {
         sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
         accel_profile = flat
       }
-      env = NIXOS_OZONE_WL, 1
       env = NIXPKGS_ALLOW_UNFREE, 1
       env = XDG_CURRENT_DESKTOP, Hyprland
       env = XDG_SESSION_TYPE, wayland
@@ -118,6 +117,8 @@ in with lib; {
       exec-once = wallsetter
       exec-once = nm-applet --indicator
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
+      exec-once = clash-meta
+      exec-once = fcitx5
       dwindle {
         pseudotile = true
         preserve_split = true
@@ -136,9 +137,10 @@ in with lib; {
       ''}
       bind = ${modifier},E,exec,emopicker9000
       bind = ${modifier},S,exec,screenshootin
-      bind = ${modifier},D,exec,discord
       bind = ${modifier},O,exec,obs
       bind = ${modifier},G,exec,gimp
+      bind = ${modifier},D,exec,dolphin
+      bind = ${modifier},C,exec,code
       bind = ${modifier}SHIFT,G,exec,godot4
       bind = ${modifier},T,exec,thunar
       bind = ${modifier},M,exec,spotify

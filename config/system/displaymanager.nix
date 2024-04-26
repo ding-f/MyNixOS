@@ -12,7 +12,7 @@ theKBDLayout theSecondKBDLayout; in
     libinput.enable = true;
     displayManager.sddm = {
       enable = true;
-      autoNumlock = true;
+      autoNumlock = false;
       wayland.enable = true;
       theme = "tokyo-night-sddm";
     };
